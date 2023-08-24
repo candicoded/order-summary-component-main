@@ -1,0 +1,143 @@
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: url('./images/pattern-background-mobile.svg') no-repeat;
+  background-color: var(--paleBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 1.5em;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--darkBlue);
+  font-weight: 900;
+  padding-bottom: 1em;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--desaturatedBlue);
+  line-height: 1.5rem;
+  padding-bottom: 1.5em;
+}
+
+.plan-container {
+  display: flex;
+  background-color: var(--veryPaleBlue);
+  border-radius: 10px;
+  padding: 1em;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  font-size: 0.9rem;
+}
+
+.annual {
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+.year {
+  color: var(--desaturatedBlue);
+}
+
+.change {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--brightBlue);
+  color: white;
+  font-weight: 900;
+  width: 100%;
+  padding: 1.3em;
+  margin-bottom: 1.5em;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cancel {
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--desaturatedBlue);
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 600px) {
+
+  body {
+    background: url('./images/pattern-background-desktop.svg') no-repeat;
+    background-size: contain;
+    background-color: var(--paleBlue);
+  }
+
+  main {
+    max-width: 400px;
+  }
+
+  section {
+    padding: 2.5em;
+  }
+
+  .plan-col {
+    padding-right: 5em;
+  }
+
+  .change:hover {
+    color: var(--desaturatedBlue);
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--desaturatedBlue);
+    cursor: pointer;
+  }
+
+  .cancel:hover {
+    color: var(--darkBlue);
+    cursor: pointer;
+  }
+}
